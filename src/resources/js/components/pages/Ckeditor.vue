@@ -17,7 +17,7 @@ import { defineComponent, onMounted, reactive, ref } from "vue";
 // import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import CKe from "@ckeditor/ckeditor5-vue";
 import {uploader} from "../UploadAdapter"
-import  Editor from 'ckeditor5-custom-build/build/ckeditor';
+import  ClassicEditor from 'ckeditor5-custom-build/build/ckeditor';
 export default defineComponent({
     components: {},
     setup() {
@@ -27,7 +27,7 @@ export default defineComponent({
 
         return {
             state,
-            editor: Editor,
+            editor: ClassicEditor,
             editorData: '<p>Content of the editor.</p>',
                 editorConfig: {
                     extraPlugins:[uploader]
