@@ -18,5 +18,5 @@
         "./resources/js/**/*",
         "./resources/js/components/**/*",
         "./resources/js/components/pages/**/*"
-    ]
+, "ckeditor"    ]
 }

@@ -4,11 +4,8 @@
             <label for="content" class="col-form-label">みしゃる</label>
         </div>
         <div class="col-auto">
-            <ckeditor
-                :editor="editor"
-                v-model="editorData"
-                :config="editorConfig"
-            ></ckeditor>
+            <ckeditor :editor="editor" v-model="editorData" :config="editorConfig"></ckeditor>
+
         </div>
         <p></p>
     </div>
@@ -17,8 +14,10 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, reactive, ref } from "vue";
-import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+// import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import CKe from "@ckeditor/ckeditor5-vue";
 import {uploader} from "../UploadAdapter"
+import  Editor from 'ckeditor5-custom-build/build/ckeditor';
 export default defineComponent({
     components: {},
     setup() {
@@ -28,11 +27,12 @@ export default defineComponent({
 
         return {
             state,
-            editor: ClassicEditor,
-            editorData,
-            editorConfig: {
-                'extraPlugins': [uploader]
-            },
+            editor: Editor,
+            editorData: '<p>Content of the editor.</p>',
+                editorConfig: {
+                    extraPlugins:[uploader]
+                }
+
         };
     },
 });
