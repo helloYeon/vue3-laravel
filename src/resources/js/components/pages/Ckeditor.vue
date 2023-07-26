@@ -18,7 +18,7 @@
 <script lang="ts">
 import { defineComponent, onMounted, reactive, ref } from "vue";
 import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
-
+import {uploader} from "../UploadAdapter"
 export default defineComponent({
     components: {},
     setup() {
@@ -30,7 +30,9 @@ export default defineComponent({
             state,
             editor: ClassicEditor,
             editorData,
-            editorConfig: {},
+            editorConfig: {
+                'extraPlugins': [uploader]
+            },
         };
     },
 });
