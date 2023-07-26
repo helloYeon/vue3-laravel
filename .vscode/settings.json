@@ -1,0 +1,47 @@
+{
+  /******************************
+   * VSCODE ファイル・エディター関連設定
+   *******************************/
+  "files.trimTrailingWhitespace": true, // 不要半角スペース除外
+  "files.encoding": "utf8", // 文字コード
+  "files.eol": "\n", // 改行コード
+  "editor.renderWhitespace": "all", //空白文字を見やすく
+
+  /******************************
+   * VSCODE プラグイン関連
+   *******************************/
+  // PHP Sniffer & Beautifier
+  "phpsab.fixerEnable": true,
+  "phpsab.snifferEnable": true,
+  "phpsab.standard": "PSR12",
+  "phpsab.executablePathCS": "./src/vendor/bin/phpcs",
+  "phpsab.executablePathCBF": "./src/vendor/bin/phpcbf",
+
+  // Code Spell Checker
+  "cSpell.enabled": true,
+  "cSpell.ignorePaths": ["composer.json", "settings.json", ".vscode", "*.yml"],
+  "cSpell.ignoreWords": [
+    "behaviour",
+    "numerify",
+    "pvue",
+    "dont",
+    "uvue",
+    "laravel"
+  ],
+  "cSpell.userWords": ["vue-sample"],
+
+  // REST Client
+  "rest-client.decodeEscapedUnicodeCharacters": true,
+  "rest-client.environmentVariables": {
+    "$shared": {
+      "version": "v1"
+    },
+    "development": {},
+    "staging": {},
+    "production": {}
+  }
+
+  // "path-autocomplete.pathMappings": {
+  //   "@components": "${folder}/src/resources"
+  // },
+}

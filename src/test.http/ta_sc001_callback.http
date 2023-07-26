@@ -1,0 +1,5 @@
+@baseUrl = http://localhost:1000/
+
+###
+# 1. ラインコールバック
+GET {{baseUrl}}api/v1/callback/line HTTP/1.1
