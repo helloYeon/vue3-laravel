@@ -24,4 +24,12 @@ export default defineConfig({
             "~": __dirname + "/node_modules",
         },
     },
+    optimizeDeps: {
+        include: ["ckeditor5-custom-build/build/ckeditor"],
+    },
+    build: {
+        commonjsOptions: {
+            include: ["ckeditor5-custom-build/build/ckeditor"],
+        },
+    },
 });

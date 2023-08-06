@@ -10,10 +10,13 @@ export default class UploadAdapter {
             const reader = new window.FileReader();
 
             reader.addEventListener("load", () => {
+                console.log("ccc");
+                console.log("aa2", reader.result);
                 resolve({ default: reader.result });
             });
 
             reader.addEventListener("error", (err) => {
+                console.log("ddd");
                 reject(err);
             });
 
@@ -22,6 +25,8 @@ export default class UploadAdapter {
             });
 
             this.loader.file.then((file) => {
+                console.log("aa1", file);
+
                 reader.readAsDataURL(file);
             });
         });

@@ -17,8 +17,12 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, reactive, ref } from "vue";
-import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
-import {uploader} from "../UploadAdapter"
+// import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+import { ClassicEditor } from "@ckeditor/ckeditor5-editor-classic";
+import { uploader } from "../UploadAdapter";
+import { Font } from "@ckeditor/ckeditor5-font";
+import Editor from "ckeditor5-custom-build/build/ckeditor";
+
 export default defineComponent({
     components: {},
     setup() {
@@ -28,10 +32,19 @@ export default defineComponent({
 
         return {
             state,
-            editor: ClassicEditor,
+            editor: Editor,
             editorData,
             editorConfig: {
-                'extraPlugins': [uploader]
+                // extraPlugins: [uploader],
+                plugins: [Font /* ... */],
+                fontFamily: {
+                    options: [
+                        "default",
+                        "Ubuntu, Arial, sans-serif",
+                        "Ubuntu Mono, Courier New, Courier, monospace",
+                    ],
+                    toolbar: ["fontFamily"],
+                },
             },
         };
     },
