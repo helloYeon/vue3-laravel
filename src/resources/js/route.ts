@@ -1,5 +1,6 @@
 import TopPage from "@/components/pages/TopPage.vue";
 import Ckeditor from "@/components/pages/Ckeditor.vue";
+import VeeVal01 from "@/components/pages/VeeVal01.vue";
 // import NextPage from "@/pages/NextPage.vue";
 
 import { createRouter, createWebHistory } from "vue-router";
@@ -14,6 +15,11 @@ const routes = [
         path: "/ckeditor",
         name: "ckEditor",
         component: Ckeditor,
+    },
+    {
+        path: "/veeVal",
+        name: "veeVal01",
+        component: VeeVal01,
     },
 ];
 

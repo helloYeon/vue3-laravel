@@ -15,9 +15,14 @@
     },
     "dependencies": {
         "@ckeditor/ckeditor5-build-classic": "^38.1.1",
+        "@ckeditor/ckeditor5-font": "^38.1.1",
         "@ckeditor/ckeditor5-vue": "^5.1.0",
         "@vitejs/plugin-vue": "^4.2.1",
+        "ckeditor5-custom-build": "file:ckeditor5",
+        "file": "^0.2.2",
+        "vee-validate": "^4.11.3",
         "vue": "^3.2.47",
-        "vue-router": "^4.1.6"
+        "vue-router": "^4.1.6",
+        "yup": "^1.2.0"
     }
 }
