@@ -28,8 +28,8 @@ export default defineConfig({
         include: ["ckeditor5-custom-build/build/ckeditor"],
     },
     build: {
-        commonjsOptions: {
-            include: ["ckeditor5-custom-build/build/ckeditor"],
-        },
+        // commonjsOptions: {
+        //     include: ["ckeditor5-custom-build/build/ckeditor", "yup"],
+        // },
     },
 });
