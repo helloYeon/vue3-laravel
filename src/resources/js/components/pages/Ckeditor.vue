@@ -19,7 +19,7 @@
 import { defineComponent, onMounted, reactive, ref } from "vue";
 // import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
 import { uploader } from "../UploadAdapter";
-import * as Editor from "ckeditor5-custom-build/build/ckeditor";
+import Editor from "ckeditor5-custom-build/build/ckeditor";
 
 export default defineComponent({
     components: {},
