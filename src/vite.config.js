@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import laravel from "laravel-vite-plugin";
 import vue from "@vitejs/plugin-vue";
 import path from "path";
+import commonjs from "vite-plugin-commonjs";
 
 export default defineConfig({
     plugins: [
@@ -14,6 +15,13 @@ export default defineConfig({
             refresh: true,
         }),
         vue(),
+        commonjs({
+            filter(id) {
+                if (["ckeditor5/build/ckeditor.js"].includes(id)) {
+                    return true;
+                }
+            },
+        }),
     ],
     resolve: {
         extensions: [".ts", ".js", ".vue", ".json"],
@@ -25,11 +33,9 @@ export default defineConfig({
         },
     },
     optimizeDeps: {
-        include: ["ckeditor5-custom-build/build/ckeditor"],
+        include: ["ckeditor5-custom-build"],
     },
     build: {
-        // commonjsOptions: {
-        //     include: ["ckeditor5-custom-build/build/ckeditor", "yup"],
-        // },
+        commonjsOptions: { exclude: ["ckeditor5-custom-build"] },
     },
 });
