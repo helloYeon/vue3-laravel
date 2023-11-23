@@ -11,6 +11,7 @@
 
 <script lang="ts">
 import { defineComponent, onMounted, reactive } from "vue";
+import axios from "axios";
 
 export default defineComponent({
     components: {},
@@ -23,7 +24,17 @@ export default defineComponent({
             state.count++;
         };
 
-        onMounted(async () => {});
+        onMounted(async () => {
+            axios
+                .get("https://my-json-server.typicode.com/typicode/demo/db")
+                .then((response) => {
+                    alert("called");
+                    console.log(response.data);
+                })
+                .catch((error) => {
+                    console.error(error);
+                });
+        });
 
         return {
             state,
