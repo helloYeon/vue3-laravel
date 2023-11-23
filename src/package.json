@@ -9,7 +9,7 @@
         "axios": "^1.1.2",
         "bootstrap": "^5.2.3",
         "laravel-vite-plugin": "^0.7.2",
-        "sass": "^1.56.1",
+        "sass": "~1.64.2",
         "vite": "^4.0.0",
         "vite-tsconfig-paths": "^4.2.0"
     },
@@ -21,6 +21,7 @@
         "ckeditor5-custom-build": "file:ckeditor5",
         "file": "^0.2.2",
         "vee-validate": "^4.11.3",
+        "vite-plugin-commonjs": "^0.9.0",
         "vue": "^3.2.47",
         "vue-router": "^4.1.6",
         "yup": "^1.2.0"
